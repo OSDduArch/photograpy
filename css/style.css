@@ -33,11 +33,18 @@ header .headerBox nav ul li {
   align-items: center;
 }
 
-header .headerBox nav ul li a {
-  padding: 18px 30px;
+header .headerBox nav ul li:not(:last-child) {
+  transition: all .4s ease-in-out;
+  opacity: 0;
+  transform: translateX(-50%);
 }
 
-header .headerBox nav ul li:last-child {
+header .headerBox nav ul li div {
+  cursor: pointer;
+}
+
+header .headerBox nav ul li a {
+  padding: 18px 30px;
 }
 
 header .headerBox nav ul li:last-child .hamBtn{
@@ -71,13 +78,18 @@ header .headerBox nav ul li:last-child .hamBtn:before {
   transition: all .3s ease-in-out;
 }
 
-.show .hamBtn:after {
+header .headerBox nav .show li:not(:last-child) {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.show li .hamBtn:after {
   top: 50% !important;
   transform: rotate(-45deg) !important;
   /* transform-origin: bottom left; */
 }
 
-.show .hamBtn:before {
+.show li .hamBtn:before {
   top: 50% !important;
   transform: rotate(225deg) !important;
 }
