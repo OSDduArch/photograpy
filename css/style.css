@@ -1,0 +1,207 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  font-size: 1rem;
+}
+
+header {
+  padding: 0 20px;
+  height: 100%;
+  /* box-shadow: 0 2px linear-gradiant(to top bottom black, white); */
+}
+
+header .headerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .headerBox h1 {
+  padding-left: 20px;
+}
+
+header .headerBox nav ul {
+  display: flex;
+  height: 100%;
+  padding-right: 50px;
+}
+
+header .headerBox nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+header .headerBox nav ul li a {
+  padding: 18px 30px;
+}
+
+header .headerBox nav ul li:last-child {
+}
+
+header .headerBox nav ul li:last-child .hamBtn{
+  width: 30px;
+  height: 25px;
+  margin-left: 50px;
+  position: relative;
+}
+
+header .headerBox nav ul li:last-child .hamBtn:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 30%;
+  transform: translate(0, -50%);
+  background-color: #000;
+  transition: all .3s ease-in-out;
+}
+
+header .headerBox nav ul li:last-child .hamBtn:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 70%;
+  transform: translate(0, -50%);
+  background-color: #000;
+  transition: all .3s ease-in-out;
+}
+
+.show .hamBtn:after {
+  top: 50% !important;
+  transform: rotate(-45deg) !important;
+  /* transform-origin: bottom left; */
+}
+
+.show .hamBtn:before {
+  top: 50% !important;
+  transform: rotate(225deg) !important;
+}
+
+/* visual */
+#visual {
+  height: 890px;
+  position: relative;
+}
+.visualImg {
+  transition: opacity .4s ease-in-out;
+  z-index: -1;
+}
+.visualImg.img1{
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../img/hero/h1_hero1.png) no-repeat;
+  background-size: cover;
+}
+
+.visualImg.img2{
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 20, 20, 0) 10%,
+    rgba(20, 20, 20, 0.15) 25%,
+    rgba(20, 20, 20, 0.3) 50%,
+    rgba(20, 20, 20, 0.45) 75%,
+    rgba(20, 20, 20, 0.5) 100%
+  ), url(../img/hero/h1_hero2.png) no-repeat;
+  background-size: cover;
+}
+
+.visualImg.img3{
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 20, 20, 0) 10%,
+    rgba(20, 20, 20, 0.15) 25%,
+    rgba(20, 20, 20, 0.3) 50%,
+    rgba(20, 20, 20, 0.45) 75%,
+    rgba(20, 20, 20, 0.5) 100%
+  ), url(../img/hero/h1_hero3.png) no-repeat;
+  background-size: cover;
+}
+
+#visual .visualBox {
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+
+#visual .textContainer {
+  display: flex;
+  position: absolute;
+  top: 30%;
+}
+
+#visual .visualTitle h2 {
+  font-size: 10rem;
+  color: #fff;
+}
+
+#visual .visualTitle img {
+  float: right;
+  width: 16rem;
+}
+
+#visual .visualBox .visualText {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30rem;
+  color: #fff;
+}
+
+#visual .visualBox .visualText h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1.3rem;
+}
+
+#visual .visualBox .visualText h3 span {
+  transition: all .2s ease;
+}
+
+#visual .visualBox .visualText em{
+  font-style: normal;
+  text-decoration: underline;
+}
+
+#visual .visualBox .visualText p {
+  font-size: 1.5rem;
+  margin-bottom: 6.5rem;
+}
+
+#visual .visualBox .visualSlide {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  width: 414px;
+  height: 61px;
+  overflow: hidden;
+}
+
+#visual .visualBox .visualSlide .slideWrap {
+  position: absolute;
+  left: -426px;
+  display: flex;
+}
+
+#visual .visualBox .visualSlide .slideWrap.animation {
+  transition: all .3s ease;
+}
+
+#visual .visualBox .visualSlide ul li {
+  width: 130px;
+  margin-right: 12px;
+}

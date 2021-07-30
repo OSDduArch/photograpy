@@ -1,0 +1,33 @@
+body, div, ul, li, dl, ol, h1, h2, h3, h4, h5, h6, input, fieldset, legend, p,
+select, table, th, td, tr, textarea, button, form, figure, figcaption {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+/* 링크 초기화 */
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+a:hover {
+  
+}
+
+body, input, textarea, select, button, table {
+  font-family: '';
+  line-height: 1.5;
+}
+
+em, address {
+  font-style: none;
+}
+
+ul, li, ol {
+  list-style: none;
+}
+
+img, video {
+  width: 100%;
+}
