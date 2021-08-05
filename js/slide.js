@@ -5,8 +5,11 @@ const originalCenter = $slideWrap.querySelector('.center');
 const textNumber = document.querySelector('.visualText span');
 // const prevBtn = $slideWrap.querySelector('.prev');
 let slidePos = -426;
+const distance = 142;
+let ready = true;
 
 window.addEventListener('DOMContentLoaded', ()=>{
+  console.log($slides[0].style.width);
   createId($slides);
   makeClone();
   setCurrentWidth();
@@ -15,32 +18,44 @@ window.addEventListener('DOMContentLoaded', ()=>{
   
   currentSlides.forEach((slide)=>{
     slide.addEventListener('click', (e)=>{
+      
       const stateCenter = $slideWrap.querySelector('.center');
       
-      if(e.currentTarget === stateCenter.nextElementSibling) {
-        $slideWrap.style.left = `${slidePos- 142}px`
-        slidePos = slidePos - 142;
+      if(e.currentTarget === stateCenter.nextElementSibling && ready === true) {
+        ready = false;
+        $slideWrap.style.left = `${slidePos - distance}px`
+        slidePos = slidePos - distance;
+        // console.log(slidePos);
         currentSlides.forEach((all)=>{
           all.classList.remove('center');
         })
         e.currentTarget.classList.add('center');
+        setTimeout(()=>{
+          ready = true;
+        },600)
 
         setInit(-852, currentSlides);
         setVisual(e.currentTarget.id, $visualImg)
-      } else if (e.currentTarget === stateCenter.previousElementSibling) {
-        $slideWrap.style.left = `${slidePos + 142}px`;
-        slidePos = slidePos + 142;
+      } else if (e.currentTarget === stateCenter.previousElementSibling && ready === true) {
+        ready = false;
+        $slideWrap.style.left = `${slidePos + distance}px`;
+        slidePos = slidePos + distance;
         currentSlides.forEach((all)=>{
           all.classList.remove('center');
         })
         e.currentTarget.classList.add('center');
-
+        setTimeout(()=>{
+          ready = true;
+        },600)
         setInit(0, currentSlides);
         setVisual(e.currentTarget.id, $visualImg)
-      }
+      } //else if (ready === false) {
+        
+      //}
     })
   })
 })
+
 
 function makeClone() {
   for (let i=$slides.length-1; i>-1; i--){
@@ -64,9 +79,11 @@ function setCurrentWidth() {
   $slideWrap.style.width = `${(currentSlides.length+1)*142}px`;
 }
 
+
 function setInit(position, slide) {
+  
   if (slidePos === position) {
-    slidePos = -426
+    slidePos = -426;
     setTimeout(()=>{
       $slideWrap.classList.remove('animation');
       $slideWrap.style.left = `${slidePos}px`;
@@ -78,9 +95,8 @@ function setInit(position, slide) {
       all.classList.remove('center');
     })
     originalCenter.classList.add('center')
-  }
+  } 
 }
-
  
 function createId(list) {
   for (let i=0;i<list.length;i++){

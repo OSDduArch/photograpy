@@ -11,9 +11,11 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/response.css">
 
   <script defer src="js/slide.js"></script>
   <script defer src="js/openMenu.js"></script>
+  <script defer src="js/fixMenuBar.js"></script>
 </head>
 <body>
   <header id="header">
@@ -21,7 +23,7 @@
       <h1>
         <a href="#"><img src="img/logo/logo.png" alt="로고"></a>
       </h1>
-      <nav>
+      <nav id=menu>
         <ul id="menuBox">
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
@@ -31,7 +33,19 @@
           <li><a href="#">Contact</a></li>
           <li><div class="hamBtn"></div></li>
         </ul>
+
+        <ul id="mobileBox">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
       </nav>
+      <div class="mobileHamBtn">
+        <div></div>
+      </div>
     </div>
   </header>
 
@@ -69,28 +83,16 @@
       <div class="galleryImg">
         <ul>
           <li>
-            <figure>
-              <img src="img/gallery/gallery1.png" alt="">
-              <figcaption>Travelshots</figcaption>
-            </figure>
+              <span>Travelshots</span>
           </li>
           <li>
-            <figure>
-              <img src="img/gallery/gallery2.png" alt="">
-              <figcaption>Experimental</figcaption>
-            </figure>
+              <span>Experimental</span>
           </li>
           <li>
-            <figure>
-              <img src="img/gallery/gallery3.png" alt="">
-              <figcaption>Father's day</figcaption>
-            </figure>
+              <span>Father's day</span>
           </li>
           <li>
-            <figure>
-              <img src="img/gallery/gallery4.png" alt="">
-              <figcaption>Curious Cats</figcaption>
-            </figure>
+              <span>Curious Cats</span>
           </li>
           <li><a href="#">More portfolio</a></li>
         </ul>
@@ -106,7 +108,7 @@
       <div class="img"></div>
     </section>
 
-    <section id="skills">
+    <section id="service">
       <ul>
         <li>
           <h3>Life is about Creating Experiences</h3>
@@ -213,34 +215,57 @@
     </section>
 
     <section id="instagram">
-      <ul>
-        <li>
-          <img src="img/gallery/instra1.png" alt="">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </li>
+      <!-- <div class="instaSlide"> -->
+        <ul>
+          <li>
+            <img src="img/gallery/instra1.png" alt="">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
 
-        <li>
-          <img src="img/gallery/instra2.png" alt="">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </li>
+          <li>
+            <img src="img/gallery/instra2.png" alt="">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
 
-        <li>
-          <img src="img/gallery/instra3.png" alt="">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </li>
+          <li>
+            <img src="img/gallery/instra3.png" alt="">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
 
-        <li>
-          <img src="img/gallery/instra4.png" alt="">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </li>
+          <li>
+            <img src="img/gallery/instra4.png" alt="">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
 
-        <li>
-          <img src="img/gallery/instra5.png" alt="">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </li>
-
-      </ul>
+          <li>
+            <img src="img/gallery/instra5.png" alt="">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      <!-- </div> -->
     </section>
   </main>
+
+  <footer id="footer">
+    <div class="footerLogo">
+      <img src="img/logo/logo2_footer.png" alt="">
+    </div>
+    <nav class="footerMenu">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Portfolio</a></li>
+        <li><a href="">Pricing</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+    <ul class="sns">
+      <li><i class="fab fa-twitter"></i></li>
+      <li><i class="fab fa-facebook-f"></i></li>
+      <li><i class="fab fa-pinterest-p"></i></li>
+    </ul>
+    <p>Copyright &copy;2021 All rights reserved | This template is made with by <span>Colorlib</span></p>
+  </footer>
 </body>
 </html>
