@@ -158,7 +158,7 @@ header .headerBox .mobileHamBtn:before {
 }
 
 #mobileBox li {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0 20px;
   padding: 0 20px;
   background-color: #fff;
@@ -170,7 +170,7 @@ header .headerBox .mobileHamBtn:before {
 }
 
 #mobileBox.show li {
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 
 
